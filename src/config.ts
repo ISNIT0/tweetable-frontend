@@ -1,6 +1,6 @@
 const configs = {
   production: {
-    apiUrl: "https://api.tweetable.hackthepress.org",
+    apiUrl: "https://api-tweetable.hackthepress.org",
   },
   development: {
     apiUrl: "http://localhost:4000",
