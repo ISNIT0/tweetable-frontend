@@ -73,7 +73,21 @@ export default function Home() {
         </form>
       </div>
 
-      <div className={styles.grid}></div>
+      <div className={styles.grid}>
+        <p>
+          Code:{" "}
+          <a
+            href="https://github.com/ISNIT0/tweetable-frontend"
+            target="_blank"
+          >
+            <strong>Front-end</strong>
+          </a>
+          ,{" "}
+          <a href="https://github.com/ISNIT0/tweetable-backend" target="_blank">
+            <strong>Back-end</strong>
+          </a>
+        </p>
+      </div>
     </main>
   );
 }
