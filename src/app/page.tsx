@@ -25,7 +25,10 @@ export default function Home() {
 
               const { tweet } = await fetch(`http://localhost:4000/tweetify`, {
                 method: "POST",
-                body: JSON.stringify({ urls: [url], context }),
+                body: JSON.stringify({
+                  urls: url ? [url] : [],
+                  textContent: context,
+                }),
                 headers: { "Content-Type": "application/json" },
               }).then((res) => res.json());
 
@@ -58,7 +61,9 @@ export default function Home() {
             className={styles.submit}
             disabled={status === "loading"}
           >
-            TURN THE ABOVE INTO A TWEET
+            {status === "loading"
+              ? "Loading..."
+              : "TURN THE ABOVE INTO A TWEET"}
           </button>
           <br />
           <br />
@@ -67,9 +72,7 @@ export default function Home() {
         </form>
       </div>
 
-      <div className={styles.grid}>
-       
-      </div>
+      <div className={styles.grid}></div>
     </main>
   );
 }

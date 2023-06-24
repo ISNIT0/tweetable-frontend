@@ -248,3 +248,14 @@
   border-radius: 8px;
   padding: 8px;
 }
+
+.submit {
+  padding: 8px;
+  border-radius: 50px;
+  background: #C13FFF;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  font-size: 2em;
+}
