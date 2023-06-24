@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import styles from "./page.module.css";
+import { config } from "@/config";
 
 export default function Home() {
   const [status, setStatus] = useState<"complete" | "loading">("complete");
@@ -23,7 +24,7 @@ export default function Home() {
               const url = form.url.value;
               const context = form.context.value;
 
-              const { tweet } = await fetch(`http://localhost:4000/tweetify`, {
+              const { tweet } = await fetch(`${config.apiUrl}/tweetify`, {
                 method: "POST",
                 body: JSON.stringify({
                   urls: url ? [url] : [],
